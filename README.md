@@ -35,4 +35,4 @@ streamlit run 📗_top100.py
 
 - `📗_top100.py`: Código principal da aplicação.
 - `dataset/`: Diretório contendo os arquivos CSV de dados.
-- `pages/`: Diretório para futuras páginas da aplicação.
+- `pages/`: Diretório para futuras páginas da aplicação.# Projeto1
