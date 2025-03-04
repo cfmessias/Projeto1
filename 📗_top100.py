@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 # Caminho absoluto para o diretório atual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
