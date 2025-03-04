@@ -3,6 +3,8 @@ import pandas as pd
 import plotly.express as px
 import streamlit as st
 
+st.set_page_config(layout="wide")
+
 # Caminho absoluto para o diretório atual
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -32,9 +34,10 @@ fig_prices = px.histogram(df_books["book price"], title="Book Price Distribution
 fig_ratings = px.bar(df_books["rating"].value_counts().sort_index(), title="Ratings Distribution")
 
 # Mostrar gráficos lado a lado
-col1, col2 = st.columns(2)
+col1, col2,col3 = st.columns(3)
 with col1:
     st.plotly_chart(fig_years)
-    st.plotly_chart(fig_prices)
 with col2:
+    st.plotly_chart(fig_prices)
+with col3:
     st.plotly_chart(fig_ratings)
