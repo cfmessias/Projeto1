@@ -21,10 +21,10 @@ st.title("Top 100 Trending Books Analysis")
 
 # Slider para faixa de preço na sidebar
 max_price = st.sidebar.slider("Price Range ($)", min_value=int(df_top100_books["book price"].min()), max_value=int(df_top100_books["book price"].max()), value=int(df_top100_books["book price"].max()))
-
+max_year=st.sidebar.slider("Year Range",min_value=int(df_top100_books["year of publication"].min()),max_value=int(df_top100_books["year of publication"].max()),value=int(df_top100_books["year of publication"].max()))
 # Filtrar os dados com base no valor do slider
 df_books = df_top100_books[df_top100_books["book price"] <= max_price]
-
+df_books=df_top100_books[df_top100_books["year of publication"]<=max_year]
 # Mostrar tabela filtrada
 st.write(df_books.head(10))
 
